@@ -1,0 +1,346 @@
+/*-----------------------catalogo---------------------------------------*/
+/* === Contenedor de las tarjetas === */
+.grilla-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* === Tarjeta de Producto (Usando la clase .producto) === */
+.producto {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* === Ajuste para la imagen dentro de .producto === */
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* === Precios y Textos === */
+.producto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.producto .precio {
+  color: #d4af37; /* Dorado/Amarillo */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.producto p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* === Estilo para el botón === */
+.producto button {
+  background-color: #3a1519;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #5a1f25;
+
+}
+/*-----------------------catalogo---------------------------------------*/
+
+/*-----------------------inventario---------------------------------------*/
+
+/* === Estilos para la Tabla de Stock (inventario.html) === */
+#inventario-stock {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.tabla-stock {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-stock th, 
+.tabla-stock td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  color: #dddddd;
+}
+
+.tabla-stock th {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Badges de Disponibilidad */
+.badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.badge.en-stock {
+  background-color: #1b4325;
+  color: #85e085;
+}
+
+.badge.agotado {
+  background-color: #4a1c1d;
+  color: #ff9999;
+}
+/*-----------------------inventario---------------------------------------*/
+
+/* === Sección de Contacto === */
+.contenedor-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.info-contacto, .formulario-contacto {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 25px;
+  flex: 1;
+  min-width: 280px;
+  color: #dddddd;
+}
+
+.info-contacto h3, .formulario-contacto h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3a1519;
+  padding-bottom: 5px;
+}
+
+.info-contacto p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.grupo-campo {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.grupo-campo label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.grupo-campo input, 
+.grupo-campo select, 
+.grupo-campo textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+#btn-contacto {
+  background-color: #3a1519;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+#btn-contacto:hover {
+  background-color: #5a1f25;
+}
+
+/*----------------------realixar pedido-----------------------------------*/
+
+/* === Estilos para el Formulario de Pedido (checkout.html) === */
+#seccion-checkout {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+#seccion-checkout h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+#seccion-checkout p {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Grupos de campos */
+.grupo-campo {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.grupo-campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #dddddd;
+}
+
+/* Inputs y Selects */
+.grupo-campo input,
+.grupo-campo select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estado de enfoque (Focus) */
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+  outline: none;
+  border-color: #d4af37; /* Borde dorado al hacer clic */
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Botón Enviar Pedido */
+#btn-enviar {
+  width: 100%;
+  background-color: #3a1519;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#btn-enviar:hover {
+  background-color: #5a1f25;
+}
+/*--------------------------------------------------------*/
+
+/* === Lista Profesional de Selección de Productos === */
+.titulo-lista {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #dddddd;
+}
+
+.item-pedido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.item-pedido:hover {
+  border-color: #da3f11;
+  background-color: #333333;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #d44e37; /* Color de casilla dorado */
+}
+
+.info-item label {
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.cantidad-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cantidad-item label {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+.cantidad-item input[type="number"] {
+  width: 60px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}

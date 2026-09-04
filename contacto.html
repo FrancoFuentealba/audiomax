@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>AudioMax | Contacto</title>
+</head>
+<body>
+
+  <!-- Encabezado Principal y Menú Global -->
+  <header>
+    <h1>AudioMax</h1>
+    <p>11 Años de experiencia</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="checkout.html">Realizar Pedido</a></li>
+      <li><a href="inventario.html">Stock</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main>
+    <section id="contacto">
+      <h2>Ponte en Contacto con Nosotros</h2>
+      <p>¿Tienes dudas sobre algún instrumento o necesitas asesoría técnica? Escríbenos.</p>
+
+      <div class="contenedor-contacto">
+        
+        <!-- Información Directa de la Tienda -->
+        <article class="info-contacto">
+          <h3>Información de Atencion</h3>
+          <p><strong>📍 Dirección:</strong> San Bernardo, Santiago Metropolitan Region, Chile</p>
+          <p><strong>📞 Teléfono:</strong> +56 9 1234 5678</p>
+          <p><strong>✉️ Correo:</strong> audiomax@gmail.cl</p>
+          <p><strong>⏰ Horario:</strong> Lunes a Viernes de 10:00 a 19:00 hrs</p>
+        </article>
+
+        <!-- Formulario de Consulta -->
+        <section class="formulario-contacto">
+          <h3>Envíanos un Mensaje</h3>
+          
+          <form id="form-contacto" action="#" method="POST">
+            
+            <div class="grupo-campo">
+              <label for="nombre-contacto">Nombre Completo:</label>
+              <input type="text" id="nombre-contacto" name="nombre" placeholder="Ej: Aarón Hernández" required autocomplete="name">
+            </div>
+
+            <div class="grupo-campo">
+              <label for="email-contacto">Correo Electrónico:</label>
+              <input type="email" id="email-contacto" name="email" placeholder="ejemplo@gmail.com" required autocomplete="email">
+            </div>
+
+            <div class="grupo-campo">
+              <label for="asunto">Asunto / Motivo:</label>
+              <select id="asunto" name="asunto" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="consulta">Consulta de Productos</option>
+                <option value="garantia">Garantía / Soporte Técnico</option>
+                <option value="cotizacion">Cotización para Empresas / Eventos</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta aquí..." required></textarea>
+            </div>
+
+            <button type="submit" id="btn-contacto">Enviar Mensaje</button>
+          </form>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+    <p>&copy; 2026 AudioMax. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
