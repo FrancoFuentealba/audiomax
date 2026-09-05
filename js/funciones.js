@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 hayErrores = true;
             }
             /*Validacion telefono*/
-            if (telefono.length < 8 || isNaN(telefono)) {
-                document.getElementById('error-telefono').textContent = 'Ingrese un nunmero de telefono valido.';
+            if (telefono.length !== 9 || isNaN(telefono)) {
+                document.getElementById('error-telefono').textContent = 'Ingrese un nunmero de telefono valido de 9 caracteres.';
                 hayErrores = true;
             }
 
             /*Flujo del mensaje de éxito*/
-            const divExito = document.getElementById('exito');
+            const divExito = document.getElementById('mensaje-exito');
 
             if (!hayErrores) {
                 divExito.textContent = 'Pedido enviado correctamente.';
@@ -49,5 +49,61 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         
+    }
+
+    /*Formulario de contacto*/
+    const formContacto = document.getElementById('form-contacto');
+
+    if (formContacto) {
+        formContacto.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            /*limpiar mensajes recientes*/
+            document.querySelectorAll('#form-contacto .error').forEach(span => {
+                span.textContent = '';
+            });
+
+            const nombre = document.getElementById('nombre-contacto').value.trim();
+            const email = document.getElementById('email-contacto').value.trim();
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            let hayErrores = false;
+
+            if (nombre === '') {
+                document.getElementById('error-nombre-contacto').textContent = 'El nombre es obligatorio.';
+                hayErrores = true;
+            }
+
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexEmail.test(email)) {
+                document.getElementById('error-email-contacto').textContent = 'Ingresa un correo electrónico válido.';
+                hayErrores = true;
+            }
+
+            if (asunto === '') {
+                document.getElementById('error-asunto').textContent = 'Por favor selecciona un motivo.';
+                hayErrores = true;
+            }
+
+            if (mensaje.length < 10) {
+                document.getElementById('error-mensaje').textContent = 'El mensaje debe tener al menos 10 caracteres.';
+                hayErrores = true;
+            }
+
+            const divExitoContacto = document.getElementById('mensaje-exito-contacto');
+
+            if (!hayErrores) {
+                divExitoContacto.textContent = '¡Mensaje enviado exitosamente! Te responderemos pronto.';
+                divExitoContacto.style.display = 'block';
+                formContacto.reset();
+
+                setTimeout(() => {
+                    divExitoContacto.style.display = 'none';
+                }, 4000);
+            } else {
+                divExitoContacto.style.display = 'none';
+            }
+        });
     }
 });
