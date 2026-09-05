@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
   <title>AudioMax | Contacto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/funciones.js" defer></script>
 </head>
 <body>
 
-  <!-- Encabezado Principal y Menú Global -->
   <header>
     <h1>AudioMax</h1>
     <p>11 Años de experiencia</p>
@@ -24,7 +24,6 @@
     </ul>
   </nav>
 
-  <!-- Contenido Principal -->
   <main>
     <section id="contacto">
       <h2>Ponte en Contacto con Nosotros</h2>
@@ -32,29 +31,34 @@
 
       <div class="contenedor-contacto">
         
-        <!-- Información Directa de la Tienda -->
+        <!-- Información Directa y Mapa Integrado -->
         <article class="info-contacto">
-          <h3>Información de Atencion</h3>
-          <p><strong>📍 Dirección:</strong> San Bernardo, Santiago Metropolitan Region, Chile</p>
+          <h3>Información de Atención</h3>
+          <p><strong>📍 Dirección:</strong> Viña del Mar, Región de Valparaíso, Chile</p>
           <p><strong>📞 Teléfono:</strong> +56 9 1234 5678</p>
           <p><strong>✉️ Correo:</strong> audiomax@gmail.cl</p>
           <p><strong>⏰ Horario:</strong> Lunes a Viernes de 10:00 a 19:00 hrs</p>
+          
+          <!-- Mapa embebido de Google Maps -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107134.74559816654!2d-71.61110034636906!3d-33.013444031649036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689de8ea820713d%3A0x8673bf0c2e6f1f45!2sVi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl" width="100%" height="250" style="border:0; margin-top: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
 
-        <!-- Formulario de Consulta -->
+        <!-- Formulario de Consulta con validaciones -->
         <section class="formulario-contacto">
           <h3>Envíanos un Mensaje</h3>
           
-          <form id="form-contacto" action="#" method="POST">
+          <form id="form-contacto" action="#" method="POST" novalidate>
             
             <div class="grupo-campo">
               <label for="nombre-contacto">Nombre Completo:</label>
               <input type="text" id="nombre-contacto" name="nombre" placeholder="Ej: Aarón Hernández" required autocomplete="name">
+              <span class="error" id="error-nombre-contacto"></span>
             </div>
 
             <div class="grupo-campo">
               <label for="email-contacto">Correo Electrónico:</label>
               <input type="email" id="email-contacto" name="email" placeholder="ejemplo@gmail.com" required autocomplete="email">
+              <span class="error" id="error-email-contacto"></span>
             </div>
 
             <div class="grupo-campo">
@@ -66,14 +70,17 @@
                 <option value="cotizacion">Cotización para Empresas / Eventos</option>
                 <option value="otro">Otro</option>
               </select>
+              <span class="error" id="error-asunto"></span>
             </div>
 
             <div class="grupo-campo">
               <label for="mensaje">Mensaje:</label>
               <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta aquí..." required></textarea>
+              <span class="error" id="error-mensaje"></span>
             </div>
 
             <button type="submit" id="btn-contacto">Enviar Mensaje</button>
+            <div id="mensaje-exito-contacto" class="exito"></div>
           </form>
         </section>
 
@@ -81,7 +88,6 @@
     </section>
   </main>
 
-  <!-- Pie de Página -->
   <footer>
     <p>&copy; 2026 AudioMax. Todos los derechos reservados.</p>
   </footer>
